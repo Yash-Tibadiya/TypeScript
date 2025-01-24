@@ -14,6 +14,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+/*************************************************************************/
 //! Class definition
 var Device = /** @class */ (function () {
     function Device() {
@@ -39,6 +40,7 @@ var HumanMaker = /** @class */ (function () {
     return HumanMaker;
 }());
 var human = new HumanMaker("Rohit", true, "");
+/*************************************************************************/
 //! public, private, protected
 // public changeable any where
 // private changeable only inside class
@@ -76,16 +78,31 @@ newBottle.changeColor(); // changed
 // bottle.color = "blue"; // also changed {TS show error}
 console.log(bottle);
 console.log(newBottle);
+/*************************************************************************/
 //! Readonly property
 var Employee = /** @class */ (function () {
     function Employee(name) {
         this.name = name;
     }
     Employee.prototype.changeName = function () {
-        this.name = "Rohit"; // changed but {TS show error}
+        // this.name = "Rohit"; // changed but {TS show error}
     };
     return Employee;
 }());
 var emp = new Employee("Yash");
 emp.changeName();
 console.log(emp);
+/*************************************************************************/
+//! Optional property
+var Person = /** @class */ (function () {
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    return Person;
+}());
+var person1 = new Person("yash", 20);
+var person2 = new Person("Rohit");
+console.log(person1);
+console.log(person2);
+/*************************************************************************/ 

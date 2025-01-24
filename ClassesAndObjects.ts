@@ -1,5 +1,6 @@
 //? Classes & Objects
 
+/*************************************************************************/
 //! Class definition
 class Device {
   name = "LG";
@@ -25,6 +26,7 @@ class HumanMaker {
 }
 let human = new HumanMaker("Rohit", true, "");
 
+/*************************************************************************/
 //! public, private, protected
 // public changeable any where
 // private changeable only inside class
@@ -64,12 +66,13 @@ newBottle.changeColor(); // changed
 console.log(bottle);
 console.log(newBottle);
 
+/*************************************************************************/
 //! Readonly property
 class Employee {
   constructor(public readonly name: string) {}
 
   changeName() {
-    this.name = "Rohit"; // changed but {TS show error}
+    // this.name = "Rohit"; // changed but {TS show error}
   }
 }
 
@@ -78,3 +81,16 @@ emp.changeName();
 
 console.log(emp);
 
+/*************************************************************************/
+//! Optional property
+class Person {
+  constructor(public name: string, public age?: number) {}
+}
+
+let person1 = new Person("yash", 20);
+let person2 = new Person("Rohit");
+
+console.log(person1);
+console.log(person2);
+
+/*************************************************************************/
