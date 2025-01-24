@@ -11,11 +11,6 @@ let tv = new Device();
 let monitor = new Device();
 
 // Constructors
-class BottleMaker {
-  constructor(public name: string, public price: number) {}
-}
-let bottle = new BottleMaker("viva", 1200);
-
 class HumanMaker {
   age: number = 0;
   constructor(
@@ -29,4 +24,42 @@ class HumanMaker {
   }
 }
 let human = new HumanMaker("Rohit", true, "");
-console.log(human);
+
+//! public, private, protected
+// public changeable any where
+// private changeable only inside class
+// protected changeable only inside class and inheritance
+
+class BottleMaker {
+  constructor(
+    public name: string,
+    private price: number,
+    protected color: string
+  ) {}
+  changingPrice() {
+    this.price = 1000;
+  }
+}
+
+class ColorBottleMaker extends BottleMaker {
+  changeColor() {
+    this.color = "blue";
+  }
+}
+
+let bottle = new BottleMaker("viva", 1200, "red");
+let newBottle = new ColorBottleMaker("viva", 1200, "red");
+
+// public
+// bottle.name = "Milton"; // changed
+
+// private
+bottle.changingPrice(); // changed
+// bottle.price = 1000; // also changed {TS show error}
+
+// protected
+newBottle.changeColor(); // changed
+// bottle.color = "blue"; // also changed {TS show error}
+
+console.log(bottle);
+console.log(newBottle);
