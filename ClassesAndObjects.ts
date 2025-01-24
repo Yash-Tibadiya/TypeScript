@@ -1,6 +1,6 @@
-//! Classes & Objects
+//? Classes & Objects
 
-// Class definition
+//! Class definition
 class Device {
   name = "LG";
   price = 12000;
@@ -51,7 +51,7 @@ let bottle = new BottleMaker("viva", 1200, "red");
 let newBottle = new ColorBottleMaker("viva", 1200, "red");
 
 // public
-// bottle.name = "Milton"; // changed
+bottle.name = "Milton"; // changed
 
 // private
 bottle.changingPrice(); // changed
@@ -63,3 +63,18 @@ newBottle.changeColor(); // changed
 
 console.log(bottle);
 console.log(newBottle);
+
+//! Readonly property
+class Employee {
+  constructor(public readonly name: string) {}
+
+  changeName() {
+    this.name = "Rohit"; // changed but {TS show error}
+  }
+}
+
+let emp = new Employee("Yash");
+emp.changeName();
+
+console.log(emp);
+

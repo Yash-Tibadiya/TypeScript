@@ -1,4 +1,4 @@
-//! Classes & Objects
+//? Classes & Objects
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -14,7 +14,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-// Class definition
+//! Class definition
 var Device = /** @class */ (function () {
     function Device() {
         this.name = "LG";
@@ -67,7 +67,7 @@ var ColorBottleMaker = /** @class */ (function (_super) {
 var bottle = new BottleMaker("viva", 1200, "red");
 var newBottle = new ColorBottleMaker("viva", 1200, "red");
 // public
-// bottle.name = "Milton"; // changed
+bottle.name = "Milton"; // changed
 // private
 bottle.changingPrice(); // changed
 // bottle.price = 1000; // also changed {TS show error}
@@ -76,3 +76,16 @@ newBottle.changeColor(); // changed
 // bottle.color = "blue"; // also changed {TS show error}
 console.log(bottle);
 console.log(newBottle);
+//! Readonly property
+var Employee = /** @class */ (function () {
+    function Employee(name) {
+        this.name = name;
+    }
+    Employee.prototype.changeName = function () {
+        this.name = "Rohit"; // changed but {TS show error}
+    };
+    return Employee;
+}());
+var emp = new Employee("Yash");
+emp.changeName();
+console.log(emp);
