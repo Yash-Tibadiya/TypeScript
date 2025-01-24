@@ -122,3 +122,24 @@ var Bottle = /** @class */ (function () {
     }
     return Bottle;
 }());
+/*************************************************************************/
+//! Getter & Setter
+var newUser = /** @class */ (function () {
+    function newUser(_name) {
+        this._name = _name;
+    }
+    Object.defineProperty(newUser.prototype, "name", {
+        get: function () {
+            return this._name;
+        },
+        set: function (value) {
+            this._name = value;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return newUser;
+}());
+var user = new newUser("Yash");
+user.name = "Rohit";
+console.log(user);

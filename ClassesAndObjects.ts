@@ -107,3 +107,20 @@ console.log(person2);
 class Bottle {
   constructor(public name: string, public price: number) {}
 }
+
+/*************************************************************************/
+//! Getter & Setter
+class newUser {
+  constructor(public _name: string) {}
+
+  get name() {
+    return this._name;
+  }
+  set name(value: string) {
+    this._name = value;
+  }
+}
+
+let user = new newUser("Yash");
+user.name = "Rohit";
+console.log(user);
