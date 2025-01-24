@@ -124,3 +124,17 @@ class newUser {
 let user = new newUser("Yash");
 user.name = "Rohit";
 console.log(user);
+
+/*************************************************************************/
+//! Static members
+
+class ToDoApp {
+  static version = "1.0.0";
+
+  static getRandomNumber() {
+    return Math.floor(Math.random() * 10 + 1);
+  }
+}
+
+console.log(ToDoApp.version);
+console.log(ToDoApp.getRandomNumber());

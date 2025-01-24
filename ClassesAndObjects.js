@@ -143,3 +143,16 @@ var newUser = /** @class */ (function () {
 var user = new newUser("Yash");
 user.name = "Rohit";
 console.log(user);
+/*************************************************************************/
+//! Static members
+var ToDoApp = /** @class */ (function () {
+    function ToDoApp() {
+    }
+    ToDoApp.getRandomNumber = function () {
+        return Math.floor(Math.random() * 10 + 1);
+    };
+    ToDoApp.version = "1.0.0";
+    return ToDoApp;
+}());
+console.log(ToDoApp.version);
+console.log(ToDoApp.getRandomNumber());
