@@ -1,14 +1,14 @@
 "use strict";
 // Interfaces & Type Aliases
-function createUser(user) {
+function createUser1(user) {
     // user.id
 }
-createUser({ id: 1, name: "Yash", email: "test@example.com" });
+createUser1({ id: 1, name: "Yash", email: "test@example.com" });
 function isAdmin(user) {
     // user.admin
     // user.id
 }
-function abc(obj) {
+function aabbcc(obj) {
     // obj.id
     // obj.name
     // obj.email

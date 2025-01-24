@@ -78,10 +78,10 @@ abcdef("Meet", 30);
 // ... -> rest/spread
 
 //* Rest parameters
-function xyz(...args: number[]): void {
+function xyzz(...args: number[]): void {
   console.log(args);
 }
-xyz(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+xyzz(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
 function abc(...args: string[]): void {
   console.log(args);
@@ -97,10 +97,10 @@ console.log(arr);
 /*************************************************************************/
 //! Function overloading
 
-function xy(a: string): void;
-function xy(a: string, b: number): number;
+function xyy(a: string): void;
+function xyy(a: string, b: number): number;
 
-function xy(a: any, b?: any): number | void {
+function xyy(a: any, b?: any): number | void {
   if (typeof a === "string" && typeof b === "undefined") {
     console.log(a);
   }
@@ -110,5 +110,5 @@ function xy(a: any, b?: any): number | void {
   else throw new Error("Invalid arguments");
 }
 
-xy("Yash");
-xy("Yash", 123);
+xyy("Yash");
+xyy("Yash", 123);

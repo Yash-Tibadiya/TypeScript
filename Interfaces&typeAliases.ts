@@ -8,10 +8,10 @@ interface User {
   gender?: string; // optional
 }
 
-function createUser(user: User) {
+function createUser1(user: User) {
   // user.id
 }
-createUser({ id: 1, name: "Yash", email: "test@example.com" });
+createUser1({ id: 1, name: "Yash", email: "test@example.com" });
 
 /*************************************************************************/
 // Extend an interface
@@ -42,7 +42,7 @@ interface Abc {
   email: string;
 }
 
-function abc(obj: Abc) {
+function aabbcc(obj: Abc) {
   // obj.id
   // obj.name
   // obj.email

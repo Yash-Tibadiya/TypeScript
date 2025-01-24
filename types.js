@@ -64,4 +64,4 @@ function xyz() {
     while (true) { }
 }
 xyz();
-// console.log(abc()); // error
+// console.log(abcd()); // error

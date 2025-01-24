@@ -77,4 +77,4 @@ function xyz(): never {
   while (true) {}
 }
 xyz();
-// console.log(abc()); // error
+// console.log(abcd()); // error

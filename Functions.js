@@ -55,10 +55,10 @@ abcdef("Meet", 30);
 //! Rest parameters
 // ... -> rest/spread
 //* Rest parameters
-function xyz(...args) {
+function xyzz(...args) {
     console.log(args);
 }
-xyz(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+xyzz(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 function abc(...args) {
     console.log(args);
 }
@@ -68,7 +68,7 @@ const arr1 = [1, 2, 3, 4, 5];
 const arr2 = [6, 7, 8, 9, 10];
 const arr = [...arr1, ...arr2];
 console.log(arr);
-function xy(a, b) {
+function xyy(a, b) {
     if (typeof a === "string" && typeof b === "undefined") {
         console.log(a);
     }
@@ -78,5 +78,5 @@ function xy(a, b) {
     else
         throw new Error("Invalid arguments");
 }
-xy("Yash");
-xy("Yash", 123);
+xyy("Yash");
+xyy("Yash", 123);
