@@ -42,10 +42,33 @@
 
 // function test(): void {}
 
-function test(name: string, callback: (value1: string, value2: string) => void) {
+function test(
+  name: string,
+  callback: (value1: string, value2: string) => void
+) {
   callback("xyz", name);
 }
 test("Yash", (value1: string, value2: string) => {
   console.log(value1);
   console.log(value2);
 });
+
+/*************************************************************************/
+//! Optional parameters and default parameters
+
+//* Optional parameters
+// function abcdef(name: string, age: number, gender?: string): void {
+//   console.log(name, age, gender);
+// }
+
+//* Default parameters
+function abcdef(
+  name: string,
+  age: number,
+  gender: string = "Not Disclosed"
+): void {
+  console.log(name, age, gender);
+}
+
+abcdef("Yash", 21, "male");
+abcdef("Meet", 30);

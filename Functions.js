@@ -39,3 +39,15 @@ test("Yash", (value1, value2) => {
     console.log(value1);
     console.log(value2);
 });
+/*************************************************************************/
+//! Optional parameters and default parameters
+//* Optional parameters
+// function abcdef(name: string, age: number, gender?: string): void {
+//   console.log(name, age, gender);
+// }
+//* Default parameters
+function abcdef(name, age, gender = "Not Disclosed") {
+    console.log(name, age, gender);
+}
+abcdef("Yash", 21, "male");
+abcdef("Meet", 30);
