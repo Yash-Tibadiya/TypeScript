@@ -94,3 +94,16 @@ console.log(person1);
 console.log(person2);
 
 /*************************************************************************/
+//! parameter properties
+// class Bottle {
+//   public name;
+//   public price;
+//   constructor( name: string, price: number) {
+//     this.name = name;
+//     this.price = price;
+//   }
+// }
+
+class Bottle {
+  constructor(public name: string, public price: number) {}
+}

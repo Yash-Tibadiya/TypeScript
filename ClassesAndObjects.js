@@ -105,4 +105,20 @@ var person1 = new Person("yash", 20);
 var person2 = new Person("Rohit");
 console.log(person1);
 console.log(person2);
-/*************************************************************************/ 
+/*************************************************************************/
+//! parameter properties
+// class Bottle {
+//   public name;
+//   public price;
+//   constructor( name: string, price: number) {
+//     this.name = name;
+//     this.price = price;
+//   }
+// }
+var Bottle = /** @class */ (function () {
+    function Bottle(name, price) {
+        this.name = name;
+        this.price = price;
+    }
+    return Bottle;
+}());
