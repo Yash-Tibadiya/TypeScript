@@ -51,3 +51,20 @@ function abcdef(name, age, gender = "Not Disclosed") {
 }
 abcdef("Yash", 21, "male");
 abcdef("Meet", 30);
+/*************************************************************************/
+//! Rest parameters
+// ... -> rest/spread
+//* Rest parameters
+function xyz(...args) {
+    console.log(args);
+}
+xyz(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+function abc(...args) {
+    console.log(args);
+}
+abc("abhay", "bhavik", "chandu", "dev", "eva");
+//* Spread operator
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [6, 7, 8, 9, 10];
+const arr = [...arr1, ...arr2];
+console.log(arr);
