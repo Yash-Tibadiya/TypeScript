@@ -68,3 +68,15 @@ const arr1 = [1, 2, 3, 4, 5];
 const arr2 = [6, 7, 8, 9, 10];
 const arr = [...arr1, ...arr2];
 console.log(arr);
+function xy(a, b) {
+    if (typeof a === "string" && typeof b === "undefined") {
+        console.log(a);
+    }
+    else if (typeof a === "string" && typeof b === "number") {
+        console.log(a, b);
+    }
+    else
+        throw new Error("Invalid arguments");
+}
+xy("Yash");
+xy("Yash", 123);

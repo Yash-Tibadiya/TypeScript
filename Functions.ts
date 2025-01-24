@@ -94,3 +94,21 @@ const arr2 = [6, 7, 8, 9, 10];
 const arr = [...arr1, ...arr2];
 console.log(arr);
 
+/*************************************************************************/
+//! Function overloading
+
+function xy(a: string): void;
+function xy(a: string, b: number): number;
+
+function xy(a: any, b?: any): number | void {
+  if (typeof a === "string" && typeof b === "undefined") {
+    console.log(a);
+  }
+  else if (typeof a === "string" && typeof b === "number") {
+    console.log(a,b);
+  }
+  else throw new Error("Invalid arguments");
+}
+
+xy("Yash");
+xy("Yash", 123);
