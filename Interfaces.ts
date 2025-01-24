@@ -1,9 +1,9 @@
 // Type Interface : typescript automatically "infers"{decide} the type of the variable
-let a = 12;
+let a1 = 12;
 
 // Type annotation
-let b: number;
-b = 12;
+let b1: number;
+b1 = 12;
 
 let c: number | string | boolean;
 c = 12;

@@ -73,8 +73,8 @@ function abcd(): void {
 }
 
 // never: if function never returns then use never
-function abc(): never {
+function xyz(): never {
   while (true) {}
 }
-abc();
+xyz();
 // console.log(abc()); // error

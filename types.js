@@ -60,8 +60,8 @@ function abcd() {
     console.log("hey");
 }
 // never: if function never returns then use never
-function abc() {
+function xyz() {
     while (true) { }
 }
-abc();
+xyz();
 // console.log(abc()); // error
