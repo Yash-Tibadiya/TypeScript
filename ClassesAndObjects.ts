@@ -138,3 +138,23 @@ class ToDoApp {
 
 console.log(ToDoApp.version);
 console.log(ToDoApp.getRandomNumber());
+
+/*************************************************************************/
+//! Abstract classes and methods
+
+abstract class Animal {    // abstract class
+  abstract sound(): void;  // abstract method
+  move() {
+    console.log("Moving...");
+  }
+}
+
+class Dog extends Animal {
+  sound(): void {
+    console.log("Bark");
+  }
+}
+
+const dog = new Dog();
+dog.sound();
+dog.move();

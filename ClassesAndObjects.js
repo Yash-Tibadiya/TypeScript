@@ -156,3 +156,26 @@ var ToDoApp = /** @class */ (function () {
 }());
 console.log(ToDoApp.version);
 console.log(ToDoApp.getRandomNumber());
+/*************************************************************************/
+//! Abstract classes and methods
+var Animal = /** @class */ (function () {
+    function Animal() {
+    }
+    Animal.prototype.move = function () {
+        console.log("Moving...");
+    };
+    return Animal;
+}());
+var Dog = /** @class */ (function (_super) {
+    __extends(Dog, _super);
+    function Dog() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Dog.prototype.sound = function () {
+        console.log("Bark");
+    };
+    return Dog;
+}(Animal));
+var dog = new Dog();
+dog.sound();
+dog.move();
