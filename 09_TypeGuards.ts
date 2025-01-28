@@ -40,6 +40,14 @@ function switchOff(device: TvRemote | CarRemote) {
   }
 }
 
+// function switchOff2(device: TvRemote | CarRemote) {
+//   if("switchTvOff" in device) {
+//     device.switchTvOff();
+//   } else if("switchCarOff" in device) {
+//     device.switchCarOff();
+//   }
+// }
+
 switchOff(Tv);
 switchOff(Car);
 
