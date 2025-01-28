@@ -3,7 +3,7 @@
 
 //? Other :
 // Array, Tuple, Enum, any, void, never, unknown
-// Object {}, Union |, Intersection &,
+// Object {}, Union |, Intersection &
 // Literal Types, Template Literal Types,
 // Type Assertions [(someValue as string) & (<string>someValue)]
 
@@ -73,8 +73,30 @@ function abcd(): void {
 }
 
 // never: if function never returns then use never
-function xyz(): never {
-  while (true) {}
-}
-xyz();
+// function xyz(): never {
+//   while (true) {}
+// }
+// xyz();
 // console.log(abcd()); // error
+
+/*************************************************************************/
+//! Literal Types
+
+function combine(
+  num1: number | string,
+  num2: number | string,
+  conversionType: "as-number" | "as-string"
+) {
+  let result;
+  if (conversionType === "as-number") {
+    result = +num1 + +num2;
+  } else if (conversionType === "as-string") {
+    result = num1.toString() + num2.toString();
+  }
+  return result;
+}
+
+const sum1 = combine("30", "26", "as-number");
+const sum2 = combine(30, 26, "as-string");
+console.log(sum1);
+console.log(sum2);
